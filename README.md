@@ -27,10 +27,11 @@ MAX_PRESS_TIME: 10
 ```
 
 ### Real example
-![image](https://i.imgur.com/8Q6Ffyb.gif)
+![image](https://i.imgur.com/rsjPao4.gif)
 
 ### Dependencies 
 * typescript
+* ts-node
 * ts-loader
 * webpack
 * ws

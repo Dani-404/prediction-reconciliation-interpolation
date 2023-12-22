@@ -31,6 +31,8 @@ class App {
         this.ctx = this.canvas.getContext("2d");
         this.game = document.getElementById("game") as HTMLElement;
         this.loginForm = document.getElementById("login") as HTMLFormElement;
+
+        window.requestAnimationFrame(this.update.bind(this));
     }
 
     async init(): Promise<any> {
@@ -64,6 +66,13 @@ class App {
             return;
 
         this.webSocketManager.sendMsg("login", username.value);
+    }
+
+    update() {
+        if(this.currentRoom != null)
+            this.currentRoom.update();
+        
+        window.requestAnimationFrame(this.update.bind(this));
     }
 }
 

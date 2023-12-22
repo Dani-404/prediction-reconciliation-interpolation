@@ -23,7 +23,6 @@ export default class Room implements RoomInterface {
         this.lastTs = 0;
         this.inputSequenceNumber = 0;
         this.pendingInputs = [];
-        window.requestAnimationFrame(this.update.bind(this));
     }
 
     initAllPlayers(playersList: Array<any>) {
@@ -150,8 +149,6 @@ export default class Room implements RoomInterface {
 
             player.entity.draw(Application.ctx as CanvasRenderingContext2D, player.username);
         });
-
-        window.requestAnimationFrame(this.update.bind(this));
     }
 
     processInputs(): void {

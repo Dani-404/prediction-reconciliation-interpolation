@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prediction, reconciliation, interpolation</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    </head>
+
+    <body>
+        <form id="login">
+            <input id="login_username" placeholder="Username..." maxlength="15"/>
+            <input type="submit" value="Login"></input>
+        </form>
+
+        <div id="game">
+            <canvas id="gameCanvas"></canvas>
+
+            <div class="settings">
+                <div>
+                    <input type="checkbox" id="prediction" name="prediction"/>
+                    <label for="prediction">Prediction</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="reconciliation" name="reconciliation"/>
+                    <label for="reconciliation">Reconciliation</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="interpolation" name="interpolation"/>
+                    <label for="interpolation">Interpolation</label>
+                </div>
+
+                <button id="init_entity">Init entity</button>
+                <button id="destroy_entity">Destroy entity</button>
+
+                <form id="room_form">
+                    <input type="text" id="room_id" placeholder="Room ID"/>
+                    <input type="submit" value="Go" />
+                </form>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>

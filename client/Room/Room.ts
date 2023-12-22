@@ -188,7 +188,7 @@ export default class Room implements RoomInterface {
         Application.webSocketManager.sendMsg("inputsData", inputs);
 
         if(Application.settingsManager.prediction)
-            activePlayer.entity.applyInput(inputs);
+            activePlayer.entity.applyInput(inputs, Application.settingsManager.cheat ? 200 : 100);
 
         this.pendingInputs.push(inputs);
     }

@@ -29,9 +29,7 @@ export default class Entity implements EntityInterface {
         ctx.fillText(username, this.position.x, this.position.y - 10);
     }
 
-    applyInput(input: InputMessage) {
-        const speed = 100;
-
+    applyInput(input: InputMessage, speed: number = 100) {
         if(input.commands.includes(Command.Right))
             this.position.x += input.pressedTime * speed;
 
